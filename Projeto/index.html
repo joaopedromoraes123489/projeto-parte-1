@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div id="mensagem-erro" style="display: none; color: red;"></div>
+        <input type="text" id="titulo-tarefa" placeholder="Título da tarefa..." required>
+        <input type="text" id="descricao-tarefa" placeholder="Descrição da tarefa..." required>
+        <input type="date" id="data-limite" required>
+        <select id="status-tarefa" required>
+            <option value="" disabled selected>Selecione o status...</option>
+            <option value="pendente">Pendente</option>
+            <option value="em-andamento">Em andamento</option>
+            <option value="pronto">Pronto</option>
+        </select>
+        <button id="adicionar">Adicionar</button>
+
+        <h2>Filtrar Tarefas</h2>
+        <div class="filtro-container">
+            <select id="filtro-status">
+                <option value="" disabled selected>Filtrar por status...</option>
+                <option value="pendente">Pendente</option>
+                <option value="em-andamento">Em andamento</option>
+                <option value="pronto">Pronto</option>
+            </select>
+            <input type="date" id="filtro-data">
+            <button id="filtrar">Filtrar</button>
+            <button id="desfiltrar">Desfiltrar</button>
+        </div>
+        <ul id="tarefas-lista"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
